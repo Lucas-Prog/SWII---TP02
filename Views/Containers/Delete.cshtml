@@ -1,0 +1,44 @@
+﻿@model TP02SWII.Models.Container
+
+@{
+    ViewData["Title"] = "Delete - Container";
+}
+
+<p>Delete</p>
+
+<p>You will delete this Container, are you sure?</p>
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BL)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BL.BLId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ContainerId" />
+        <input type="submit" value="Delete" 
+               class="btn btn-danger" /> |
+        <a asp-action="Index">Back</a>
+    </form>
+</div>

@@ -1,0 +1,37 @@
+﻿@model TP02SWII.Models.BL
+
+@{
+    ViewData["Title"] = "Delete - BL";
+}
+
+<p>Delete</p>
+
+<p>You will delete this BL, are you sure?</p>
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Consignee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Consignee)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ship)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BLId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back</a>
+    </form>
+</div>
